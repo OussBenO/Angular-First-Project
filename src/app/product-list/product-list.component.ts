@@ -7,14 +7,14 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [FormsModule, CommonModule],
   template: `
-    <div>
+   <div>
       <div>
-        <input type="text" [(ngModel)]="newProduct" placeholder="Enter product">
-        <button [disabled]="!newProduct" (click)="addProduct()">Add Product</button>
+        <input type="text" [(ngModel)]="newProduct" placeholder="Entrez un produit">
+        <button [disabled]="!newProduct" (click)="addProduct()">Ajouter le produit</button>
       </div>
       
       @if (products.length === 0) {
-        <p>No product</p>
+        <p>Aucun produit</p>
       } @else {
         <ul>
           @for (product of products; track product) {
@@ -22,7 +22,7 @@ import { CommonModule } from '@angular/common';
           }
         </ul>
       }
-    </div>
+</div>
   `
 })
 export class ProductListComponent {

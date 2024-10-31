@@ -9,16 +9,16 @@ import { VerbConjugatorComponent } from './app/verb-conjugator/verb-conjugator.c
   standalone: true,
   imports: [SumCalculatorComponent, ProductListComponent, VerbConjugatorComponent],
   template: `
-    <div>
-      <h2>Sum Calculator</h2>
+   <div>
+      <h2>Calculateur de Somme</h2>
       <sum-calculator></sum-calculator>
 
-      <h2>Product List</h2>
+      <h2>Liste de Produits</h2>
       <product-list></product-list>
 
-      <h2>Verb Conjugator</h2>
+      <h2>Conjugueur de Verbes</h2>
       <verb-conjugator></verb-conjugator>
-    </div>
+</div>
   `
 })
 class App {

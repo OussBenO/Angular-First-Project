@@ -7,8 +7,8 @@ import { FormsModule } from '@angular/forms';
   imports: [FormsModule],
   template: `
     <div>
-      <input type="number" [(ngModel)]="num1" placeholder="First number">
-      <input type="number" [(ngModel)]="num2" placeholder="Second number">
+      <input type="number" [(ngModel)]="num1" placeholder="Premier Nombre">
+      <input type="number" [(ngModel)]="num2" placeholder="Deuxieme Nombre">
       <p>{{ getSum() }}</p>
     </div>
   `
@@ -19,9 +19,9 @@ export class SumCalculatorComponent {
 
   getSum(): string {
     if (this.num1 === null || this.num2 === null) {
-      return 'Cannot calculate';
+      return 'Impossible de claculer';
     }
     const sum = this.num1 + this.num2;
-    return `The sum of ${this.num1} and ${this.num2} is ${sum}`;
+    return `La somme de  ${this.num1} et ${this.num2} égale ${sum}`;
   }
 }

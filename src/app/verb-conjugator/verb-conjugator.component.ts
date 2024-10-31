@@ -7,14 +7,14 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [FormsModule, CommonModule],
   template: `
-    <div>
-      <input type="text" [(ngModel)]="verb" placeholder="Enter verb">
-      <button (click)="conjugate()">Conjugate</button>
+ <div>
+      <input type="text" [(ngModel)]="verb" placeholder="Entrez un verbe">
+      <button (click)="conjugate()">Conjuguer</button>
       
       @if (!verb) {
-        <p>No verb</p>
+        <p>Aucun verbe</p>
       } @else if (!verb.endsWith('er')) {
-        <p>It is not a verb of the first group</p>
+        <p>Ce n'est pas un verbe du premier groupe</p>
       } @else {
         <ul>
           @for (conjugation of getConjugations(); track conjugation) {
@@ -22,7 +22,7 @@ import { CommonModule } from '@angular/common';
           }
         </ul>
       }
-    </div>
+</div>
   `
 })
 export class VerbConjugatorComponent {
